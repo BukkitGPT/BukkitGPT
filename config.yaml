@@ -1,5 +1,5 @@
-# Options: en-us, zh-cn
-# Translate your language here: https://github.com/CubeGPT/BukkitGPT/new/master/i18n
+# Options: en-us
+# Your language is not listed here? Feel free to go to Crowdin to translate the text: https://crowdin.com/project/bukkitgpt
 UI_LANGUAGE: "en-us"
 
 # GPT SETTINGS #

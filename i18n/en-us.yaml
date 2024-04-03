@@ -11,6 +11,7 @@ projectpage.description.description: What features do you want your plugin to ha
 projectpage.description.packageid: What is the package id of your plugin? If you have a domain name like baimoqilin.top, you should write the domain name backwards and add the name of your plugin at the end (no spaces), for example if my plugin is called demo, then you should fill in top.baimoqilin.demo.
 projectpage.button.generate: Generate
 projectpage.button.delete: Delete
+projectpage.button.generating: Generating
 buildproject.title: Builing Logs
 buildproject.success: Congratulations! Your plugin is ready. Now add the plugin to the projects/{artifact_name}/target directory and just find the jar file and put it in your server's plugins folder. BukkitGPT is an open source and free project. Feel free to make pull requests. If you can, please donate this project on https://www.buymeacoffee.com/baimoqilin
 buildproject.failed: Build failed. This may be due to a bug in the ChatGPT writeup. Typically, GPT4 writes more accurate code. So you should probably toggle CODING_MODEL to gpt-4 in config.py. In later releases, we'll add the ability to have ChatGPT fix bugs automatically, but not yet in the version you're using. You can start the program again and enter the same description to have ChatGPT regenerate the code.

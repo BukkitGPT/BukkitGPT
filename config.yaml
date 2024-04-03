@@ -1,4 +1,6 @@
-UI_LANGUAGE: "en_us"
+# Options: en-us, zh-cn
+# Translate your language here: https://github.com/CubeGPT/BukkitGPT/new/master/i18n
+UI_LANGUAGE: "en-us"
 
 # GPT SETTINGS #
 # EDIT REQUIRED

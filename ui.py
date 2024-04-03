@@ -82,7 +82,7 @@ class HomePage(ttk.Frame):
     def create_project(self):
         global CurrentProject
         if config.API_KEY == "" and config.DEBUG_MODE == False:
-            messagebox.showwarning("Warning", "Please enter an API_KEY!")
+            messagebox.showwarning("Warning", i18n.get_localization("homepage.warning.noapikey"))
         else:
             CurrentProject = "New"
             logger("HomePage: New project")
@@ -104,25 +104,25 @@ class ProjectPage(ttk.Frame):
         self.title_label.pack(pady=10)
         self.text1 = ttk.Label(self, text="artifact_name")
         self.text1.pack(anchor="w")
-        self.text2 = ttk.Label(self, text="Let's start by nameing your plugin! The name should be in English and without spaces.")
+        self.text2 = ttk.Label(self, text=i18n.get_localization("projectpage.description.artifact_name"))
         self.text2.pack(anchor="w")
         self.input1 = ttk.Entry(self)
         self.input1.pack(anchor="w")
         self.text3 = ttk.Label(self, text="description")
         self.text3.pack(anchor="w")
-        self.text4 = ttk.Label(self, text="C")
+        self.text4 = ttk.Label(self, text=i18n.get_localization("projectpage.description.description"))
         self.text4.pack(anchor="w")
         self.input2 = ttk.Entry(self)
         self.input2.pack(anchor="w")
         self.text5 = ttk.Label(self, text="package_id")
         self.text5.pack(anchor="w")
-        self.text6 = ttk.Label(self, text="What is the package id of your plugin? If you have a domain name like baimoqilin.top, you should write the domain name backwards and add the name of your plugin at the end (no spaces), for example if my plugin is called demo, then you should fill in top.baimoqilin.demo.")
+        self.text6 = ttk.Label(self, text=i18n.get_localization("projectpage.description.packageid"))
         self.text6.pack(anchor="w")
         self.input3 = ttk.Entry(self)
         self.input3.pack(anchor="w")
-        self.generate_button = ttk.Button(self, text="Generate", command=lambda: self.generate_project())
+        self.generate_button = ttk.Button(self, text=i18n.get_localization("projectpage.button.generate"), command=lambda: self.generate_project())
         self.generate_button.pack(side=tk.LEFT, padx=10, pady=10)
-        self.delete_button = ttk.Button(self, text="Delete", command=lambda: self.delete_project(), style="Red.TButton")
+        self.delete_button = ttk.Button(self, text=i18n.get_localization("projectpage.button.delete"), command=lambda: self.delete_project(), style="Red.TButton")
         self.delete_button.pack(side=tk.RIGHT, padx=10, pady=10)
 
     def load_info_from_file(self):
@@ -153,7 +153,7 @@ class ProjectPage(ttk.Frame):
         artifact_name = self.input1.get()
         description = self.input2.get()
         package_id = self.input3.get()
-        self.generate_button.config(text="Generating", state=tk.DISABLED)
+        self.generate_button.config(text=i18n.get_localization("projectpage.button.generating"), state=tk.DISABLED)
         info = BuildProject()
 
         # Save information to the "info.bukkitgpt" file
@@ -167,7 +167,7 @@ class ProjectPage(ttk.Frame):
             json.dump(info_data, file)
 
         messagebox.showinfo("Result", info)
-        self.generate_button.config(text="Generate", state=tk.NORMAL)
+        self.generate_button.config(text=i18n.get_localization("projectpage.button.generate"), state=tk.NORMAL)
 
     def delete_project(self):
         global CurrentProject

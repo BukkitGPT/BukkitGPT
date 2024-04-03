@@ -1,5 +1,10 @@
 name: Crowdin Action
 
+permissions:
+  pull-requests: write
+  issues: write
+  repository-projects: write
+
 on:
   push:
     branches: [ master ]

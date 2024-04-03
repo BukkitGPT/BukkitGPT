@@ -4,6 +4,7 @@
 <img src="https://img.shields.io/badge/Bukkit-GPT-blue">
 <a href="https://github.com/Zhou-Shilin/BukkitGPT/pulls"><img src="https://img.shields.io/badge/PRs-welcome-20BF20"></a>
 <img src="https://img.shields.io/badge/License-Apache-red">
+<a href="https://crowdin.com/project/bukkitgpt"><img src="https://img.shields.io/badge/i18n-Crowdin-darkblue"></a>
 <br/>
 </div>
 
@@ -74,7 +75,7 @@ BukkitGPT 是一个开源、免费、由人工智能驱动的 Minecraft Bukkit �
 - [ ] 有想法或想加入我们的团队吗？发送电子邮件至 [我们](mailto:admin@baimoqilin.top)！
 
 ## 工作原理
-当用户键入插件描述时，程序让 `gpt-3.5-turbo` 优化提示，然后将优化后的提示传递给 `gpt-4`。`gpt-4` 将以 json 格式返回，例如：
+当用户键入插件描述时，程序让 `gpt-3.5-turbo` 优化提示，然后将优化后的提示传递给 `gpt-4-turbo-preview`。`gpt-4-turbo-preview` 将以 json 格式返回，例如：
 ```
 {
 "output": [

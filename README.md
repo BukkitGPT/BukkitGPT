@@ -4,12 +4,13 @@
 <img src="https://img.shields.io/badge/Bukkit-GPT-blue">
 <a href="https://github.com/Zhou-Shilin/BukkitGPT/pulls"><img src="https://img.shields.io/badge/PRs-welcome-20BF20"></a>
 <img src="https://img.shields.io/badge/License-Apache-red">
+<a href="https://crowdin.com/project/bukkitgpt"><img src="https://img.shields.io/badge/i18n-Crowdin-darkblue"></a>
 <p>English | <a href="https://github.com/BukkitGPT/BukkitGPT/blob/master/README-zh_cn.md">简体中文</a></p>
 <br/>
 </div>
 
 > [!NOTE]
-> Developers and README translators are welcome to join the CubeGPT Team!
+> Developers and translators are welcome to join the CubeGPT Team!
 
 ## Table of Contents
 - [Introduction](https://github.com/BukkitGPT/BukkitGPT#introduction)
@@ -60,7 +61,7 @@ Moved to [Projects Tab](https://github.com/orgs/CubeGPT/projects/4).
 - [ ] Have ideas or want to join our team? Send [us](mailto:admin@baimoqilin.top) an email!
 
 ## How it works
-When the user types the plugin description, the program lets `gpt-3.5-turbo` optimize the prompt, and then gives the optimized prompt to `gpt-4`. `gpt-4` will return it in json format, for example:
+When the user types the plugin description, the program lets `gpt-3.5-turbo` optimize the prompt, and then gives the optimized prompt to `gpt-4-turbo-preview`. `gpt-4-turbo-preview` will return it in json format, for example:
 ```
 {
     "output": [

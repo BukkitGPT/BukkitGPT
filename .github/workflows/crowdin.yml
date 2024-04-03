@@ -12,6 +12,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Replace api_token in crowdin.yml
+        run: |
+          sed -i 's/"api_token": "[^"]*"/"api_token": "${{ secrets.CROWDIN_PERSONAL_TOKEN }}"/' crowdin.yml
+
       - name: crowdin action
         uses: crowdin/github-action@v1
         with:

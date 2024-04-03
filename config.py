@@ -9,8 +9,6 @@ with open("config.yaml", "r") as conf:
         globals()[key] = value
         logger(f"config: {key} -> {value}")
 
-# Example usage: config["API_KEY"]
-
 def edit_config(key, value):
     with open("config.yaml", "r") as file:
         lines = file.readlines()

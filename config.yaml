@@ -1,3 +1,7 @@
+# Options: en-us
+# Your language is not listed here? Feel free to go to Crowdin to translate the text: https://crowdin.com/project/bukkitgpt
+UI_LANGUAGE: "en-us"
+
 # GPT SETTINGS #
 # EDIT REQUIRED
 # Get your api key from openai. Remember google/bing is always your best friend.

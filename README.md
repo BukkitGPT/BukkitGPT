@@ -35,9 +35,8 @@
 
 BukkitGPT is an open source, free, AI-powered Minecraft Bukkit plugin generator. It was developed for minecraft server owners who are not technically savvy but need to implement all kinds of customized small plugins. From code to build, debug, all done by gpt.
 
-## Advertisement
-Contact: [admin@baimoqilin.top](mailto:admin@baimoqilin.top)  
-Advertising revenue will be split among contributors in proportion to their contribution.
+## Partner
+[![](https://www.bisecthosting.com/partners/custom-banners/c37f58c7-c49b-414d-b53c-1a6e1b1cff71.webp)](https://bisecthosting.com/cubegpt)
 
 ## Features
 

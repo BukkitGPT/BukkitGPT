@@ -12,7 +12,7 @@ import build
 def initialize():
     logger(f"Launch. Software version {config.VERSION_NUMBER}, platform {sys.platform}")
 
-def askgpt(system_prompt, user_prompt, model_name):
+def askgpt(system_prompt: str, user_prompt: str, model_name: str):
     """
     Interacts with ChatGPT using the specified prompts.
 
@@ -50,7 +50,7 @@ def askgpt(system_prompt, user_prompt, model_name):
     return assistant_reply
 
 
-def package_to_path(package_id):
+def package_to_path(package_id: str):
     """
     Converts a package ID to its corresponding path.
 
@@ -68,7 +68,18 @@ def package_to_path(package_id):
     logger(f"package_to_path: full_path {full_path}")
     return full_path
 
-def text_to_action(text, folder_name, package_list):
+def text_to_action(text: str, folder_name: str, package_list: list):
+    """
+    Copies a template folder and writes code files based on the provided text.
+
+    Args:
+        text (str): The input text containing information about the code files to be generated.
+        folder_name (str): The name of the destination folder where the code files will be created.
+        package_list (list): A list of package names to be included in the generated code.
+
+    Returns:
+        None
+    """
     text = json.loads(text)
     base_path = "projects"
     source_folder = "template"
@@ -91,12 +102,36 @@ def text_to_action(text, folder_name, package_list):
             logger(f"text_to_action: Write file {file_path} content: {code}")
     
 
-def package_id_to_list(package_id):
+def package_id_to_list(package_id: str):
+    """
+    Convert a package ID string into a list of package components.
+
+    Args:
+        package_id (str): The package ID string to be converted.
+
+    Returns:
+        list: A list of package components.
+
+    """
     # Split the package_id using the dot as the delimiter
     package_list = package_id.split('.')
     return package_list
 
-def generate_plugin(working_path, description, package_id, artifact_name, package_list, dont_build=False):
+def generate_plugin(working_path: str, description: str, package_id: str, artifact_name: str, package_list: list, dont_build=False):
+    """
+    Generate a plugin using the specified parameters.
+
+    Args:
+        working_path (str): The working path for the plugin generation.
+        description (str): The description of the plugin.
+        package_id (str): The package ID of the plugin.
+        artifact_name (str): The name of the artifact.
+        package_list (list): A list of packages to be included in the plugin.
+        dont_build (bool, optional): Whether to skip the build step. Defaults to False.
+
+    Returns:
+        str: The build result if the plugin is built, or "OK" if the build step is skipped.
+    """
     # Edit info.bukkitgpt
     with open("info.bukkitgpt", "w") as f:
         f.write("{\n")

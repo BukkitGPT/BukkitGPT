@@ -5,6 +5,12 @@ from datetime import datetime
 first_call_time = None
 
 def get_log_filename():
+    """
+    Returns the filename for the log file based on the current timestamp.
+
+    Returns:
+        str: The filename for the log file in the format 'logs/%b-%d-%H-%M-%S-%Y'.
+    """
     global first_call_time
 
     if first_call_time is None:
@@ -15,6 +21,15 @@ def get_log_filename():
     return log_filename
 
 def logger(text):
+    """
+    Writes the given text to a log file with a timestamp prefix.
+
+    Args:
+        text (str): The text to be logged.
+
+    Returns:
+        None
+    """
     log_filename = get_log_filename()
 
     timestamp_prefix = datetime.now().strftime("[%H:%M:%S]")

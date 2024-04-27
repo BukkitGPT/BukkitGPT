@@ -5,6 +5,8 @@
 <a href="https://github.com/Zhou-Shilin/BukkitGPT/pulls"><img src="https://img.shields.io/badge/PRs-welcome-20BF20"></a>
 <img src="https://img.shields.io/badge/License-Apache-red">
 <a href="https://crowdin.com/project/bukkitgpt"><img src="https://img.shields.io/badge/i18n-Crowdin-darkblue"></a>
+<a href="https://discord.gg/kTZtXw8s7r"><img src="https://img.shields.io/discord/1212765516532289587
+"></a>
 <p>English | <a href="https://github.com/BukkitGPT/BukkitGPT/blob/master/README-zh_cn.md">简体中文</a></p>
 <br/>
 </div>

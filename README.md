@@ -12,6 +12,9 @@
 > [!NOTE]
 > Developers and translators are welcome to join the CubeGPT Team!
 
+> [!NOTE]
+> Generate a house or other structure using our other open source project, [BuilderGPT](https://github.com/CubeGPT/BuilderGPT)!
+
 ## Table of Contents
 - [Introduction](https://github.com/BukkitGPT/BukkitGPT#introduction)
 - [Advertisement](https://github.com/BukkitGPT/BukkitGPT#advertisement)
@@ -98,7 +101,7 @@ pip install openai
 *(Make sure you have the [Python](https://www.python.org) environment installed on your computer)*
 
 ### Console
-1. Download `Source Code.zip` from [the release page]([https:///](https://github.com/Zhou-Shilin/BukkitGPT/releases)) and unzip it.
+1. Download `Source Code.zip` from [the release page]([https:///](https://github.com/CubeGPT/BukkitGPT/releases)) and unzip it.
 2. Edit `config.py`, fill in your OpenAI Apikey. If you don't know how, remember that [Google](https://www.google.com/) and [Bing](https://www.bing.com/) are always your best friends.
 3. Run `console.py` (bash `python console.py`), enter the artifact name & description & package id as instructed to generate your plugin.
 4. Copy your plugin from `projects/<artifact_name>/target/<artifact_name>-<version>.jar` to your server `plugins/` folder.
@@ -106,7 +109,7 @@ pip install openai
 
 ### UI
 
-1. Download `Source Code.zip` from [the release page]([https:///](https://github.com/Zhou-Shilin/BukkitGPT/releases)) and unzip it.
+1. Download `Source Code.zip` from [the release page]([https:///](https://github.com/CubeGPT/BukkitGPT/releases)) and unzip it.
 2. Run `ui.py` (bash `python console.py`), go to Settings page and fill in your apikey. 
 3. Enter the artifact name & description & package id as instructed to generate your plugin.
 4. Copy your plugin from `projects/<artifact_name>/target/<artifact_name>-<version>.jar` to your server `plugins/` folder.
@@ -118,7 +121,7 @@ pip install openai
 Solution: [Download BuildTools](https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar), place it in an empty folder, double-click it, choose "1.13.2" in `Settings/Select Version`, click `Compile` in the bottom right corner and let it finish. And then go to your BukkitGPT folder, in `projects/<artifact_name_of_your_plugin>`, double-click `build.bat`. You'll find your plugin in `projects/<artifact_name_of_your_plugin>/target` folder.
 
 ## Contributing
-If you like the project, you can give the project a star, or [submit an issue](https://github.com/Zhou-Shilin/BukkitGPT/issues) or [pull request](https://github.com/Zhou-Shilin/BukkitGPT/pulls) to help make it better.
+If you like the project, you can give the project a star, or [submit an issue](https://github.com/CubeGPT/BukkitGPT/issues) or [pull request](https://github.com/CubeGPT/BukkitGPT/pulls) to help make it better.
 
 ## License
 ```

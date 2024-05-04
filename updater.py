@@ -23,7 +23,7 @@ def main():
     print("Checking updates...")
 
     # Fetch release information from GitHub
-    response = requests.get('https://api.github.com/repos/CubeGPT/BukkitGPT/releases')
+    response = requests.get('https://api.github.com/repos/CubeGPT/BukkitGPT/releases', verify=False)
     releases = response.json()
 
     if not releases:

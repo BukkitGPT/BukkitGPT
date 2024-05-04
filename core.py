@@ -12,13 +12,15 @@ import build
 def initialize():
     logger(f"Launch. Software version {config.VERSION_NUMBER}, platform {sys.platform}")
 
-def askgpt(system_prompt: str, user_prompt: str, model_name: str):
+def askgpt(system_prompt: str, user_prompt: str, model_name: str, disable_json_mode=False):
     """
     Interacts with ChatGPT using the specified prompts.
 
     Args:
         system_prompt (str): The system prompt.
         user_prompt (str): The user prompt.
+        model_name (str): The model name to use for the interaction.
+        disable_json_mode (bool, optional): Whether to disable JSON mode. Defaults to False.
 
     Returns:
         str: The response from ChatGPT.
@@ -36,11 +38,17 @@ def askgpt(system_prompt: str, user_prompt: str, model_name: str):
     logger(f"askgpt: user {user_prompt}")
 
     # Create a chat completion
-    response = client.chat.completions.create(
-        model=model_name,
-        response_format={"type": "json_object"},
-        messages=messages
-    )
+    if disable_json_mode:
+        response = client.chat.completions.create(
+            model=model_name,
+            messages=messages
+        )
+    else:
+        response = client.chat.completions.create(
+            model=model_name,
+            response_format={"type": "json_object"},
+            messages=messages
+        )
 
     logger(f"askgpt: response {response}")
 

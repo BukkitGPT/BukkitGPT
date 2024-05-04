@@ -25,7 +25,7 @@ def make_response(build_result):
 
 core.initialize()
 
-# will move to core.initialize in next version
+# will move to core.initialize in the future
 if config.DEBUG_MODE == False:
     if updater.main() == True:
         sys.exit()
@@ -56,7 +56,7 @@ package_list = core.package_id_to_list(package_id)
 
 if config.ENABLE_BETTER_DESCRIPTION == True:
     print("[0/3] Generating better description")
-    description = core.askgpt(config.SYS_BETTER_DESCRIPTION, config.USR_BETTER_DESCRIPTION, config.BETTER_DESCRIPTION_MODEL)
+    description = core.askgpt(config.SYS_BETTER_DESCRIPTION, config.USR_BETTER_DESCRIPTION, config.BETTER_DESCRIPTION_MODEL, disable_json_mode=True)
     logger(f"better description: {description}")
     os.system(clear_command)
 

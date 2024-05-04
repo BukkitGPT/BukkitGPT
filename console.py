@@ -20,7 +20,7 @@ def make_response(build_result):
         if regenerate == "n":
             pass
         else:
-            build_result = core.generate_plugin(working_path, description, package_id, artifact_name)
+            build_result = core.generate_plugin(working_path, description, package_id, artifact_name, package_list)
             core.make_response(build_result)
 
 core.initialize()

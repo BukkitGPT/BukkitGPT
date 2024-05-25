@@ -9,8 +9,6 @@ import json
 import shutil
 import re
 import sys
-import subprocess
-import threading
 
 from log_writer import logger
 import core
@@ -24,39 +22,10 @@ description = None
 package_id = None
 log_output = None
 
-def run_maven(text_area, maven):
-    global log_output
-
-    process = subprocess.Popen(f"projects/{artifact_name}/build.bat", stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
-    
-    log_output = ""
-    
-    for line in process.stdout:
-        log_output += line
-        text_area.insert(tk.END, line)
-        text_area.see(tk.END)
-    
-    process.stdout.close()
-    process.wait()
-    maven.destroy()
-
-    return log_output
-
 def BuildProject():
     working_path = core.package_to_path(package_id)
     package_list = core.package_id_to_list(package_id)
-    core.generate_plugin(working_path, description, package_id, artifact_name, package_list, dont_build=True)
-
-    maven = tk.Tk()
-    maven.title(i18n.get_localization("buildproject.title"))
-
-    text_area = scrolledtext.ScrolledText(maven, wrap=tk.WORD)
-    text_area.pack(expand=True, fill='both')
-
-    thread = threading.Thread(target=run_maven(text_area, maven))
-    thread.start()
-
-    maven.mainloop()
+    log_output = core.generate_plugin(working_path, description, package_id, artifact_name, package_list)
 
     logger(f"BuildProject: {log_output}")
     if "BUILD SUCCESS" in log_output:

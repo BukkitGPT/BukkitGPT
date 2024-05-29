@@ -25,10 +25,9 @@ def make_response(build_result):
 
 core.initialize()
 
-# will move to core.initialize in the future
-if config.DEBUG_MODE == False:
-    if updater.main() == True:
-        sys.exit()
+#if config.DEBUG_MODE == False:
+    # if updater.main() == True:
+    #     sys.exit()
 
 if sys.platform.startswith('linux') or sys.platform.startswith('daiwin'):
         clear_command = "clear"

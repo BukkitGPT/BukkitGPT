@@ -30,8 +30,9 @@
 - [How it works](https://github.com/BukkitGPT/BukkitGPT#how-it-works)
 - [Requirements](https://github.com/BukkitGPT/BukkitGPT#requirements)
 - [Quick Start](https://github.com/BukkitGPT/BukkitGPT#quick-start)
-  - [Console](https://github.com/BukkitGPT/BukkitGPT#console)
-  - [UI](https://github.com/BukkitGPT/BukkitGPT#ui)
+  - [Windows/Linux](https://github.com/BukkitGPT/BukkitGPT#windows-linux)
+  - [Python/Console](https://github.com/BukkitGPT/BukkitGPT#python-console)
+  - [Python/UI](https://github.com/BukkitGPT/BukkitGPT#python-ui)
 - [Troubleshooting](https://github.com/BukkitGPT/BukkitGPT#troubleshooting)
   - [The POM for org.spigotmc:spigot:jar:1.13.2-R0.1-SNAPSHOT is missing](https://github.com/BukkitGPT/BukkitGPT#the-pom-for-orgspigotmcspigotjar1132-r01-snapshot-is-missing)
 - [Contributing](https://github.com/BukkitGPT/BukkitGPT#contributing)
@@ -112,20 +113,28 @@ pip install openai
 
 *(Make sure you have the [Python](https://www.python.org) environment installed on your computer)*
 
-### Console
-1. Download `Source Code.zip` from [the release page]([https:///](https://github.com/CubeGPT/BukkitGPT/releases)) and unzip it.
+### Windows/Linux
+1. Download `Source Code.zip` from [the release page](https://github.com/CubeGPT/BukkitGPT/releases) and unzip it.
 2. Edit `config.py`, fill in your OpenAI Apikey. If you don't know how, remember that [Google](https://www.google.com/) and [Bing](https://www.bing.com/) are always your best friends.
+3. Run `ui.exe` (bash `python console.py`), enter the artifact name & description & package id as instructed to generate your plugin.
+4. Copy your plugin from `projects/<artifact_name>/target/<artifact_name>-<version>.jar` to your server `plugins/` folder.
+5. Restart your server and enjoy your AI-powered-plugin.
+
+### Python/Console
+1. Download `Source Code.zip` from [the release page](https://github.com/CubeGPT/BukkitGPT/releases) and unzip it.
+2. Edit `config.yaml`, fill in your OpenAI Apikey. If you don't know how, remember that [Google](https://www.google.com/) and [Bing](https://www.bing.com/) are always your best friends.
 3. Run `console.py` (bash `python console.py`), enter the artifact name & description & package id as instructed to generate your plugin.
 4. Copy your plugin from `projects/<artifact_name>/target/<artifact_name>-<version>.jar` to your server `plugins/` folder.
 5. Restart your server and enjoy your AI-powered-plugin.
 
-### UI
+### Python/UI
 
-1. Download `Source Code.zip` from [the release page]([https:///](https://github.com/CubeGPT/BukkitGPT/releases)) and unzip it.
-2. Run `ui.py` (bash `python console.py`), go to Settings page and fill in your apikey. 
-3. Enter the artifact name & description & package id as instructed to generate your plugin.
-4. Copy your plugin from `projects/<artifact_name>/target/<artifact_name>-<version>.jar` to your server `plugins/` folder.
-5. Restart your server and enjoy your AI-powered-plugin.
+1. Download `Source Code.zip` from [the release page](https://github.com/CubeGPT/BukkitGPT/releases) and unzip it.
+2. Edit `config.yaml`, fill in your OpenAI Apikey. If you don't know how, remember that [Google](https://www.google.com/) and [Bing](https://www.bing.com/) are always your best friends.
+3. Run `ui.py` (bash `python console.py`).
+4. Enter the artifact name & description & package id as instructed to generate your plugin.
+5. Copy your plugin from `projects/<artifact_name>/target/<artifact_name>-<version>.jar` to your server `plugins/` folder.
+6. Restart your server and enjoy your AI-powered-plugin.
 
 ## Troubleshooting
 

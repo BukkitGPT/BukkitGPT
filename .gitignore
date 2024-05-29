@@ -1,6 +1,6 @@
 projects/*
 !projects/template/
-
+build/*
 logs/*
 !logs/README.txt
 test.py

@@ -1,3 +1,8 @@
+# ***IMPORTANT: THIS PROJECT WILL BE COMPLETELY REWRITTEN AND THE REPOSITORY WILL BE ARCHIVED. CHECK OUT THE REWRITTEN VERSION AT THE REPOSITORY URL: [https://github.com/CubeGPT/BukkitGPT-v3](https://github.com/CubeGPT/BukkitGPT-v3)***
+# Please do not use the version in this repository and switch to the new, rewritten version. Why I made this decision: https://gist.github.com/Zhou-Shilin/e3503bb3d86de72e5f8875325c0f07d4
+# Chinese: 重要：本项目将被完全重写，存储库将被存档。请查看重写版本的存储库网址：[https://github.com/CubeGPT/BukkitGPT-v3](https://github.com/CubeGPT/BukkitGPT-v3)；请不要使用本存储库中的版本，切换到新的、重写的版本；关于为何我做了这个决定：https://gist.github.com/Zhou-Shilin/e3503bb3d86de72e5f8875325c0f07d4
+
+
 <div align="center">
 <img src="https://cdn.jsdelivr.net/gh/Zhou-Shilin/picx-images-hosting@master/20240202/bukkitgpt-logo.webp"/> 
 <h1>BukkitGPT</h1>
